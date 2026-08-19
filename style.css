@@ -4,12 +4,12 @@
 
 body {
   margin: 0;
-  background: #947706;
-  color: #222;
+  background: #50f0ee;
+  color: #1ba3cd;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-#all-contents {
+#all-contents { 
   max-width: 1500px;
   min-height: 100vh;
   margin: 0 auto;
