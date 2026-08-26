@@ -4,8 +4,8 @@
 
 body {
   margin: 0;
-  background: rgb(133, 8, 8);
-  color: black;
+  background: rgb(36, 167, 152);
+  color: rgb(1, 18, 3);
   font-family: "Helvetica Neue", Arial, sans-serif; 
 }
 
@@ -39,7 +39,7 @@ main {
   font-weight: 900;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
 }
 
 .content > p {
