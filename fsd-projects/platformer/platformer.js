@@ -40,8 +40,9 @@ createPlatform(600, 200, 100,20 , "teal");
 createPlatform(800, 300, 100, 20 , "teal");
 createPlatform(940, 450, 100, 20 , "teal");
 createPlatform(1200, 600, 100, 20 , "teal");
-createPlatform(500, 700, 400, 20 , "teal");
-createPlatform(500, 700, 400, 20 , "teal");
+createPlatform(700, 700, 40, 100 , "teal");
+createPlatform(600, 700, 40, 100 , "teal");
+
 
 
 
