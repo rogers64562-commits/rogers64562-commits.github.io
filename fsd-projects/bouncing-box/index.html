@@ -6,12 +6,12 @@
     <script src="jquery.min.js"></script>
     <style>
       body {
-      background-color: black;
+      background-color: rgb(1, 27, 129);
       }
       .box {
         width: 70px;
         height: 70px;
-        background-color: red;
+        background-color: rgb(128, 6, 6);
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -24,7 +24,10 @@
 
       .board {
         height: 100vh;
+        background-image:url("https://images.hdqwalls.com/wallpapers/the-batman-dark-knight-of-gotham-b4.jpg");
+        background-size:cover;
       }
+
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
   </head>
@@ -106,7 +109,9 @@
           }
          
             
-
+          if(positionY < 0){
+            speedY *= -1;
+          }
       
           
           if(positionY > boardHeight - 80){
