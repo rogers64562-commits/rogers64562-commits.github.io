@@ -33,16 +33,36 @@ var init = function (window) {
            physikz: physikz,
            circles: circles,
            game: game,
-       });       
+       }); 
+          
+          var circle = draw.randomCircleInArea(canvas, true, true, "#23c3df", 2);
+        physikz.addRandomVelocity(circle, canvas, 5, 5);
+        view.addChild(circle);
+        circles.push(circle);
+
+    } 
+
+       
+       
         
         
 
 
         // TODO 3 : Call the drawCircle() function
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
 
 
 
         // TODO 7 : Use a loop to create multiple circles
+        for (var i = 0; i < 25; i++) {
+        drawCircle();   
+         }
+
+        
 
 
 
@@ -64,9 +84,13 @@ var init = function (window) {
            
 
             // TODO 8 / TODO 9 : Iterate over the array
-           
-            
-        }
+            for (var i = 0; i < circle.length; i ++){
+                physikz.update.Position(circles[i]);
+                game.checkCirclePosition(circles[i]);
+
+            }
+            Gamification.update();
+            }
     
         /* 
         This Function should check the position of a circle that is passed to the 
