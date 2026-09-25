@@ -20,10 +20,21 @@ var init = function (window) {
         ///////////////////
         
         // TODO 1 : Declare and initialize our variables
+        var circles = [];
 
 
 
         // TODO 2 : Create a function that draws a circle 
+        function drawCircle(){
+       Gamification.init({
+           canvas: canvas,
+           view: view,
+           draw: draw,
+           physikz: physikz,
+           circles: circles,
+           game: game,
+       });       
+        
         
 
 
