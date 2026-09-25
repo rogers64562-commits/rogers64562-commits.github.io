@@ -7,7 +7,7 @@ var init = function (window) {
         app = window.opspark.makeApp(),
         canvas = app.canvas, 
         view = app.view,
-        fps = draw.fps('#000');
+        fps = draw.fps('#000000');
         
     
     window.opspark.makeGame = function() {
@@ -26,6 +26,17 @@ var init = function (window) {
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
+       
+          
+          var circle = draw.randomCircleInArea(canvas, true, true, "#23c3df", 2);
+        physikz.addRandomVelocity(circle, canvas, 5, 5);
+        view.addChild(circle);
+        circles.push(circle);
+
+   
+        } 
+
+       
        Gamification.init({
            canvas: canvas,
            view: view,
@@ -34,32 +45,18 @@ var init = function (window) {
            circles: circles,
            game: game,
        }); 
-          
-          var circle = draw.randomCircleInArea(canvas, true, true, "#23c3df", 2);
-        physikz.addRandomVelocity(circle, canvas, 5, 5);
-        view.addChild(circle);
-        circles.push(circle);
-
-    } 
-
-       
-       
         
         
 
 
         // TODO 3 : Call the drawCircle() function
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+        
 
 
 
         // TODO 7 : Use a loop to create multiple circles
-        for (var i = 0; i < 25; i++) {
-        drawCircle();   
+        for (var i = 0; i < 50; i++) {
+            drawCircle();   
          }
 
         
@@ -84,8 +81,8 @@ var init = function (window) {
            
 
             // TODO 8 / TODO 9 : Iterate over the array
-            for (var i = 0; i < circle.length; i ++){
-                physikz.update.Position(circles[i]);
+            for (var i = 0; i < circles.length; i ++){
+                physikz.updatePosition(circles[i]);
                 game.checkCirclePosition(circles[i]);
 
             }
@@ -109,9 +106,9 @@ var init = function (window) {
                 circle.x = canvas.height;
             }
             if (circle.y < 0) {
-                circle.y = canvas.height;
+                circle.y = canvas.width;
             }
-            if (circle.y > canvas.height)  {
+            if (circle.y > canvas.width)  {
                 circle.y = 0;
             }
             
